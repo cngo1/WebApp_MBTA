@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <title>Amazing app to help you find nearest MBTA station</title>
 </head>
+
+<style>
+h1 {text-align: center; color: lightseagreen}
+p {text-align: center; color: mediumaquamarine;}
+</style>
+
 <body>
 
+<h1>Let's Get You Places!</h1>
+<form method = "POST" name = "mbta_helper">
+<p>Please enter a place:</p>
+
+<div style="text-align: center;">
+<input type="text"  maxlength="100" size="25" name = "location" style="border: solid cadetblue 2px"/>
+</div>
+<br>
+<div style="text-align: center;">
+<input type = "submit" value="Submit Location"/>
+</div>
+</form>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazing app to help you find nearest MBTA station</title>
+</head>
+
+<style>
+</style>
+
+<body>
+<h1>hello</h1>
+<form method = "POST" name="mbtahelper">
+    {% if error %}
+    <p style = "color:mediumaquamarine"> Where is this place??</p>
+    {% endif %}
+<p>Please re-enter a new location</p>
+<div style="text-align: center;">
+    <input type="text"  maxlength="100" size="25" name = "location" style="border: solid cadetblue 2px"/>
+</div>
+<br>
+<div style="text-align: center;">
+    <input type = "submit" value="Submit Location"/>
+</div>
+</form>
+</body>
+</html>
