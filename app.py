@@ -16,16 +16,16 @@ def index():
 def location():
     if request.method == "POST":
         place_name = str(request.form["location"])
-        station_name, wheelchair_accessible = find_stop_near(place_name)
+        station, wheelchair = find_stop_near(place_name)
         value = ""
-        if station_place:
-            if wheelchair == 2:
-                value = 'Inacessible'
-            elif wheelchair == 1:
+        if station:
+            if wheelchair == "Inaccessible":
+                value = "Inaccessible"
+            elif wheelchair == "Accessible":
                 value = "Accessible"
             else:
                 value = "No information"
-            return render_template("return_message.html", place_name = place_name, station_name=station_name, wheelchair_accessible=wheelchair_accessible)
+            return render_template("return_message.html", place_name=place_name, station=station, wheelchair=wheelchair)
         else:
-            return render_template("mbta_helper.html", error=True)
-        return render_template("mbta_helper.html", error=None)
+            return render_template("index.html", error=True)
+    return render_template("index.html", error=None)

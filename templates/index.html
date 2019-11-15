@@ -13,7 +13,10 @@ p {text-align: center; color: mediumaquamarine;}
 <body>
 
 <h1>Let's Get You Places!</h1>
-<form method = "POST" name = "mbta_helper">
+<form method = "POST" name = "cheese">
+    {% if error %}
+    <p>This place doesn't exist.</p>
+    {% endif %}
 <p>Please enter a place:</p>
 
 <div style="text-align: center;">

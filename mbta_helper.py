@@ -69,7 +69,7 @@ def find_stop_near(place_name):
         return "Accessible"
     else:
         return "No information"
-    return station, wheelchair
+    return (station, wheelchair)
     
 
 
