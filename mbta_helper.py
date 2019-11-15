@@ -64,12 +64,12 @@ def find_stop_near(place_name):
     latitude, longitude = get_lat_long(place_name)
     station, wheelchair = get_nearest_station(latitude, longitude)
     if wheelchair == 2:
-        return "Inaccessible"
+        wheelchair = "Inaccessible"
     elif wheelchair == 1:
-        return "Accessible"
+        wheelchair = "Accessible"
     else:
-        return "No information"
-    return (station, wheelchair)
+        wheelchair = "No information"
+    return station, wheelchair
     
 
 

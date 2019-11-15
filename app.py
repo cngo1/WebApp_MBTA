@@ -3,7 +3,7 @@ Application that helps find the nearest station and whether or not it is wheel c
 """
 
 from flask import Flask, render_template, request
-
+from mbta_helper import find_stop_near
 
 app = Flask(__name__)
 
@@ -27,5 +27,5 @@ def location():
                 value = "No information"
             return render_template("return_message.html", place_name=place_name, station=station, wheelchair=wheelchair)
         else:
-            return render_template("index.html", error=True)
-    return render_template("index.html", error=None)
+            return render_template("next.html", error=True)
+    return render_template("next.html", error=None)
